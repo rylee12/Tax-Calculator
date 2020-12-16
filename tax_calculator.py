@@ -1,4 +1,3 @@
-import requests
 from bs4 import BeautifulSoup
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
@@ -9,9 +8,9 @@ PATH = "C:\Program Files (x86)\chromedriver.exe"
 USER_AGENT = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.183 Safari/537.36"
 
 options = Options()
-#options.add_argument("--headless")
+# If headless option is giving you errors that make the program break, disable it
+options.add_argument("--headless")
 options.add_argument("--window-size=1920,1080")
-
 driver = webdriver.Chrome(options=options, executable_path=PATH)
 
 # inputs
